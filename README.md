@@ -7,4 +7,4 @@ make deploy env=<env> region=<region> aws_profile=<profile>
 make destroy env=<env> region=<region> aws_profile=<profile>
 ```
 
-## Custom Resource Backed By a Lambda [Here](./awscdk/resources/functions/renderer)
+## Lambda code [here](./awscdk/resources/functions/renderer)
