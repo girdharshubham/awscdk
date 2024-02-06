@@ -24,3 +24,7 @@ destroy: cleanup
 	aws eks update-kubeconfig --region $(region) --profile $(aws_profile) --name $$eks_cluster && \
 	helm uninstall ingress-nginx -n ingress-nginx && \
 	cdk destroy $(env) --profile $(aws_profile)
+
+.PHONY: synth
+synth: cleanup
+	@cdk synth $(env) --profile $(aws_profile)
