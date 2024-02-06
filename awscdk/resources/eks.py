@@ -83,7 +83,6 @@ class EksCluster(Construct):
 
     def add_helm_chart(self, charts):
         """
-        TODO | Figure out how this piece could work
         :param charts:
         :return: None
         """
