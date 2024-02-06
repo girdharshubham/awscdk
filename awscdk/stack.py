@@ -19,7 +19,7 @@ class App(Stack):
     ) -> None:
         super().__init__(scope, construct_id, **kwargs)
         ssm_parameter_base = "/platform/account"
-
+        # register_outout holds the helm release values for nginx ingress. I think a minor todo would be to register it with eks's helm chart - need to figure out how they'd work together
         cr.HelmValue(self, f"{construct_id}HelmValue", ssm_parameter_base, environment).register_output()
 
         ssm.DeploymentEnvironmentParameter(self, f"{construct_id}DeploymentEnvironmentParameter", environment,
